@@ -299,9 +299,9 @@ namespace SparkChange.Tests.Helpers
                     {
                         Id = 35,
                         Price = GetProduct21.Price,
-                        ProductName = GetProduct10.Name,
+                        ProductName = GetProduct21.Name,
                         Quantity = 5,
-                        Unit = GetProduct10.Unit
+                        Unit = GetProduct21.Unit
                     }
                 }
             };

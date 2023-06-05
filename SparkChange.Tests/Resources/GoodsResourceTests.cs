@@ -39,7 +39,7 @@ namespace SparkChange.Tests.Resources
         public async Task GivenDifferentCurrencyWhenGetAllShouldReturnGoodsInNewCurrency()
         {
             var exchangeRate = 0.786M;
-            var expectedProducts = UnitTestHelpers.GetProductsResponse(ApplicationConstants.DefaultCurrency, exchangeRate);
+            var expectedProducts = UnitTestHelpers.GetProductsResponse(CurrencyValue.CHF, exchangeRate);
 
             //Act
             mockCurrencyResource.Setup(c => c.GetExchangeRate(ApplicationConstants.DefaultCurrency, CurrencyValue.CHF)).ReturnsAsync(exchangeRate);

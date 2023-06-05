@@ -25,6 +25,12 @@ namespace SparkChange.Tests.Resources
             underTest = new BasketResource(databaseContext, mockCurrencyResource.Object, basketConverter, mockBasketValidator.Object);
         }
 
+        [TearDown]
+        public void TearDown()
+        {
+            mockBasketValidator.Invocations.Clear();
+        }
+
         private static IEnumerable<TestCaseData> InvalidCustomerId() => new[]
         {
             new TestCaseData(new Guid("00000000-0000-0000-0000-000000000000"))

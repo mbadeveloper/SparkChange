@@ -15,6 +15,7 @@ namespace SparkChange.Tests.Helpers
             databaseContext.Products.AddRange(UnitTestHelpers.GetProducts());
             databaseContext.Baskets.AddRange(UnitTestHelpers.GetBaskets());
             databaseContext.BasketItems.AddRange(UnitTestHelpers.GetBasketsItems());
+            databaseContext.SaveChanges();
         }
 
         [OneTimeTearDown]
