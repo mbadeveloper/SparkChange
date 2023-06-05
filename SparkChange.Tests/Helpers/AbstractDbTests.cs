@@ -24,5 +24,12 @@ namespace SparkChange.Tests.Helpers
             databaseContext.Database.EnsureDeleted();
             databaseContext.Dispose();
         }
+
+        public void ResetBasketItems()
+        {
+            databaseContext.BasketItems.RemoveRange(databaseContext.BasketItems);
+            databaseContext.BasketItems.AddRange(UnitTestHelpers.GetBasketsItems());
+            databaseContext.SaveChanges();
+        }
     }
 }

@@ -150,6 +150,7 @@ namespace SparkChange.Tests.Resources
             //Assert
             mockBasketValidator.Verify(v => v.Validate(It.IsAny<BasketItemRequest>()), Times.Once);
             result.Should().BeEquivalentTo(expectedBasketItemResponse, options => options.Excluding(su => su.Id));
+            ResetBasketItems();
         }
 
         [Test]
